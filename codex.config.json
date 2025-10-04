@@ -1,0 +1,5 @@
+{
+  "mode": "auto",
+  "local": { "enabled": true },
+  "cloud": { "enabled": true }
+}
