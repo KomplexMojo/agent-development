@@ -1,0 +1,25 @@
+{
+  "name": "agent",
+  "version": "1.0.0",
+  "description": "agent for game",
+  "main": "index.js",
+  "scripts": {
+    "test": "pnpm run asbuild && node tests/index.js",
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "pnpm run asbuild:debug && pnpm run asbuild:release",
+    "start": "npx serve ."
+  },
+  "author": "KomplexMojo",
+  "license": "ISC",
+  "devDependencies": {
+    "assemblyscript": "^0.28.8"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  }
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Agent Visualizer</title>
+<style>
+  :root {
+    --bg: #0b0c0e;
+    --fg: #f7f7f7;
+    --muted: #a0a0a0;
+    --panel: #15171a;
+    --accent: #4da3ff;
+    --ok: #2ecc71;
+    --warn: #f1c40f;
+  }
+  html, body { height: 100%; }
+  body { font-family: system-ui, sans-serif; margin: 0; color: var(--fg); background: var(--bg); }
+  header { display:flex; align-items:center; justify-content:space-between; padding: 16px 20px; background: var(--panel); border-bottom: 1px solid #1f2226; }
+  header h1 { font-size: 18px; margin: 0; letter-spacing: .3px; }
+  header .mode { display:flex; gap:12px; align-items:center; }
+  header .badge { font-size: 12px; padding: 4px 8px; border-radius: 999px; background: #22262b; color: var(--muted); border: 1px solid #2a2f35; }
+  header .badge.live { color: #0b0; border-color: #0b0; }
+
+  main { display:grid; grid-template-columns: 320px 1fr; gap: 20px; padding: 20px; }
+  aside { background: var(--panel); border: 1px solid #1f2226; border-radius: 8px; padding: 14px; }
+  aside h2 { margin: 4px 0 10px; font-size: 14px; color: var(--muted); font-weight: 600; }
+
+  .hud { display: grid; grid-template-columns: repeat(3, auto); gap: .5rem 1rem; align-items: center; }
+  .hud code { font-weight: 600; }
+  .controls { margin-top: 12px; display: flex; gap: .5rem; flex-wrap: wrap; }
+  .controls button { background: #22262b; color: var(--fg); border: 1px solid #2a2f35; border-radius: 6px; padding: 6px 10px; cursor: pointer; }
+  .controls button:hover { border-color: var(--accent); }
+
+  .workers { margin-top: 10px; display: grid; gap: 8px; }
+  .worker-card { padding: 10px; border: 1px solid #202329; border-radius: 6px; background: #121418; display:flex; justify-content:space-between; align-items:center; }
+  .worker-card .id { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: var(--muted); }
+  .worker-card .state { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: #1b1f24; border: 1px solid #2a2f35; }
+
+  .viewport { background: var(--panel); border: 1px solid #1f2226; border-radius: 8px; padding: 14px; }
+  .viewport h2 { margin: 4px 0 10px; font-size: 14px; color: var(--muted); font-weight: 600; }
+  canvas { border: 1px solid #2a2f35; margin-top: 12px; background: #0f1114; border-radius: 6px; }
+
+  footer { color: var(--muted); font-size: 12px; padding: 10px 20px 20px; }
+</style>
+
+<header>
+  <h1>Agent Visualizer</h1>
+  <div class="mode" aria-live="polite">
+    <span class="badge" id="mode-badge">mode: local</span>
+    <span class="badge" id="fps-badge">fps: –</span>
+    <span class="badge" id="workers-badge">workers: 0</span>
+    <span class="badge" id="pool-badge">pooled: 0</span>
+  </div>
+</header>
+
+<main>
+  <aside>
+    <h2>Agent HUD</h2>
+    <div class="hud" role="list">
+      <div>X:</div><code id="x">-</code>
+      <div>Y:</div><code id="y">-</code>
+      <div>HP:</div><code id="hp">-</code>
+      <div>SP:</div><code id="sp">-</code>
+      <div>Cooldown:</div><code id="cd">-</code>
+      <div>Effort:</div><code id="eff">-</code>
+    </div>
+
+    <div class="controls" aria-label="Controls">
+      <button id="init">Init</button>
+      <button id="step">Step</button>
+      <button id="heal">Heal +5</button>
+      <button id="spend">Spend 5 SP</button>
+      <button id="left">←</button>
+      <button id="right">→</button>
+      <button id="up">↑</button>
+      <button id="down">↓</button>
+    </div>
+
+    <h2 style="margin-top:14px">Workers</h2>
+    <div class="workers" id="workers-list" aria-live="polite">
+      <!-- Dedicated workers will be listed here by web/app.js -->
+    </div>
+
+    <h2 style="margin-top:14px">Pooled Agents</h2>
+    <div class="workers" id="pool-list" aria-live="polite">
+      <!-- Pooled agents will be listed here by web/app.js -->
+    </div>
+  </aside>
+
+  <section class="viewport">
+    <h2>Viewport (20×20)</h2>
+    <canvas id="grid" width="200" height="200" aria-label="Grid"></canvas>
+  </section>
+</main>
+
+<footer>
+  Built with AssemblyScript. Use <code>?mode=worker</code> to enable worker mode. The page is display-only; behavior is implemented in <code>web/app.js</code>.
+</footer>
+
+<!-- Behavior (no inline JS) -->
+<script type="module" src="./web/app.js"></script>

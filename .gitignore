@@ -1,0 +1,15 @@
+# Node / JS
+node_modules/
+dist/
+build/
+*.log
+.env
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Local CLI / Codex artifacts
+codex.log
+.codex/
+.env.local

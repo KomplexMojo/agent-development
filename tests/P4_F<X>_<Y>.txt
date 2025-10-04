@@ -1,0 +1,36 @@
+/**
+ * [REQ:P4-F02_1] 
+ * Goal: The agent tracks and exposes stamina (current, total, regeneration).
+ * This test validates the presence and defaults of agent_vitals stamina exports.
+ *
+ * Verification per requirement:
+ *  - unit: reading self-state returns expected values for current, total, and stamina regeneration.
+ *
+ * Run:
+ *   npm run asbuild
+ *   npm test
+ */
+
+import assert from "node:assert/strict";
+
+(async () => {
+  // Load the compiled AssemblyScript module (release, then debug fallback)
+  let mod;
+  try { mod = await import("../build/release.js"); } catch { mod = await import("../build/debug.js"); }
+
+  // Required exports (call signatures) for stamina introspection
+  const fns = [
+
+  ];
+
+  for (const name of fns) {
+    assert.equal(typeof mod[name], "function", `${name} export should exist`);
+  }
+
+
+
+  console.log("[REQ:P4-F02_1] stamina introspection tests: ok");
+})().catch((err) => {
+  console.error("[REQ:P4-F02_1] stamina introspection tests: failed", err);
+  process.exit(1);
+});
