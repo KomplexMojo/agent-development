@@ -1,25 +1,32 @@
 {
-  "name": "agent",
+  "name": "actor",
   "version": "1.0.0",
-  "description": "agent for game",
+  "description": "actor for game",
   "main": "index.js",
   "scripts": {
-    "test": "pnpm run asbuild && node tests/index.js",
-    "asbuild:debug": "asc assembly/index.ts --target debug",
-    "asbuild:release": "asc assembly/index.ts --target release",
+    "test": "pnpm run asbuild && node apps/simulation/tests/index.js",
+    "asbuild:debug": "asc apps/simulation/assembly/index.ts --config apps/simulation/asconfig.json --target debug",
+    "asbuild:release": "asc apps/simulation/assembly/index.ts --config apps/simulation/asconfig.json --target release",
     "asbuild": "pnpm run asbuild:debug && pnpm run asbuild:release",
-    "start": "npx serve ."
+    "start": "npx serve .",
+    "test:orchestrator": "vitest run",
+    "dev:orchestrator": "node scripts/dev-orchestrator.mjs",
+    "telemetry:generate": "node apps/orchestrator/bin/orchestrator-bridge.mjs --width 25 --height 25 --actors 10 --barriers 50",
+    "coverage:assembly": "pnpm run asbuild:release && rm -rf .coverage coverage/assembly && NODE_V8_COVERAGE=.coverage node apps/simulation/tests/index.js && node scripts/aggregate-simulation-coverage.mjs",
+    "coverage:ui": "rm -rf .coverage-ui coverage/orchestrator && NODE_V8_COVERAGE=.coverage-ui vitest run && node scripts/aggregate-simulation-coverage.mjs --coverage-dir .coverage-ui --out-dir coverage/orchestrator --include apps/orchestrator/ --label Orchestrator --warn-missing-wasm false",
+    "coverage": "pnpm coverage:assembly && pnpm coverage:ui"
   },
   "author": "KomplexMojo",
   "license": "ISC",
   "devDependencies": {
-    "assemblyscript": "^0.28.8"
+    "assemblyscript": "^0.28.8",
+    "vitest": "^1.4.0"
   },
   "type": "module",
   "exports": {
     ".": {
-      "import": "./build/release.js",
-      "types": "./build/release.d.ts"
+      "import": "./apps/simulation/build/release.js",
+      "types": "./apps/simulation/build/release.d.ts"
     }
   }
 }

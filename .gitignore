@@ -2,9 +2,12 @@
 node_modules/
 dist/
 build/
+apps/simulation/build/
 *.log
 .env
 .DS_Store
+apps/orchestrator-ui/node_modules/
+apps/orchestrator-ui/dist/
 
 # VS Code
 .vscode/
@@ -13,3 +16,5 @@ build/
 codex.log
 .codex/
 .env.local
+.coverage/
+coverage/

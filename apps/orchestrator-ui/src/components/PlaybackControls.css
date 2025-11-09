@@ -1,0 +1,18 @@
+.playback-controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.playback-controls button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-elevated);
+  color: var(--color-foreground);
+  cursor: pointer;
+}
+
+.playback-controls button:hover {
+  background: var(--color-surface-hover);
+}

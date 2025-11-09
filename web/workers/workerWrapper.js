@@ -1,9 +1,9 @@
 // Thin wrappers to manage dedicated and pooled workers from the main thread.
 // Usage:
-//   import { DedicatedAgentThread, AgentWorkerPool } from "./web/workerWrappers.js";
+//   import { DedicatedActorThread, ActorWorkerPool } from "./web/workerWrappers.js";
 
-export class DedicatedAgentThread {
-  constructor(url = new URL("./workers/agentWorker.js", import.meta.url)) {
+export class DedicatedActorThread {
+  constructor(url = new URL("./workers/actorWorker.js", import.meta.url)) {
     this.worker = new Worker(url, { type: "module" });
     this.ready = new Promise((resolve) => {
       const h = (e) => {
@@ -36,7 +36,7 @@ export class DedicatedAgentThread {
   }
 }
 
-export class AgentWorkerPool {
+export class ActorWorkerPool {
   constructor(url = new URL("./workers/poolWorker.js", import.meta.url)) {
     this.worker = new Worker(url, { type: "module" });
     this.pendingInits = new Map();
@@ -55,18 +55,18 @@ export class AgentWorkerPool {
     };
   }
 
-  addAgent(id) {
+  addActor(id) {
     return new Promise((resolve) => {
       this.pendingInits.set(id, resolve);
       this.worker.postMessage({ type: "init", id });
     });
   }
 
-  tickAgent(id) {
+  tickActor(id) {
     this.worker.postMessage({ type: "tick", id });
   }
 
-  removeAgent(id) {
+  removeActor(id) {
     this.worker.postMessage({ type: "destroy", id });
   }
 }

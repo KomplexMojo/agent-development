@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:orchestrator:telemetry:ui:v1",
+  "title": "Normalized Telemetry Document (UI)",
+  "type": "object",
+  "required": ["version", "meta", "frames"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "type": "string", "const": "ui.telemetry.v1" },
+    "meta": {
+      "type": "object",
+      "required": ["summaries", "grid"],
+      "additionalProperties": false,
+      "properties": {
+        "rawVersion": { "type": "string" },
+        "seed": { "type": "integer" },
+        "summaries": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "grid": {
+          "type": "object",
+          "required": ["width", "height"],
+          "additionalProperties": false,
+          "properties": {
+            "width": { "type": "integer", "minimum": 0 },
+            "height": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "guidance": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "planId": { "type": "string" },
+            "status": { "type": "string" },
+            "promptHash": { "type": "string" },
+            "responseHash": { "type": "string" },
+            "model": { "type": "string" },
+            "appliedOptions": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "width": { "type": "integer" },
+                "height": { "type": "integer" },
+                "actorCount": { "type": "integer" },
+                "barrierCount": { "type": "integer" },
+                "ticks": { "type": "integer" }
+              }
+            }
+          }
+        },
+        "error": { "type": "string" },
+        "budget": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "total": { "type": "number", "minimum": 0 },
+            "spent": { "type": "number", "minimum": 0 },
+            "remaining": { "type": "number", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "frames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["tick", "grid", "actors", "portals", "stairs"],
+        "additionalProperties": false,
+        "properties": {
+          "tick": { "type": "integer", "minimum": 0 },
+          "grid": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "summary": { "type": "string" },
+          "actors": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/actor" }
+          },
+          "portals": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/portal" }
+          },
+          "stairs": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/stair" }
+          },
+          "telemetry": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "directives": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "outcomes": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "solver": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "actor": {
+      "type": "object",
+      "required": ["id", "x", "y"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "symbol": { "type": "string" },
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "stamina": { "type": "number" },
+        "intent": { "type": "string" },
+        "tier": { "type": "string" },
+        "outcome": { "type": "string" },
+        "rejection": { "type": "string" },
+        "solver": { "type": "string" },
+        "solverCode": { "type": "integer" },
+        "role": { "type": "string" },
+        "kind": { "type": "string" },
+        "faction": { "type": "string" },
+        "aiuMode": { "type": "string" },
+        "aiuModeCode": { "type": "integer" },
+        "aiuAux": { "type": "integer" },
+        "aiuApplied": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "aiuDropped": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "cultivation": {
+          "type": "object",
+          "required": ["isActive", "ticks"],
+          "additionalProperties": false,
+          "properties": {
+            "isActive": { "type": "boolean" },
+            "ticks": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "vulnerability": { "type": "integer" },
+        "aius": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "tier": { "type": "string" },
+              "cost": { "type": "number" },
+              "moduleId": { "type": "number" },
+              "kind": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "portal": {
+      "type": "object",
+      "required": ["x", "y", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "type": { "type": "string", "enum": ["entrance", "exit"] },
+        "symbol": { "type": "string" }
+      }
+    },
+    "stair": {
+      "type": "object",
+      "required": ["x", "y", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "type": { "type": "string", "enum": ["up", "down"] },
+        "symbol": { "type": "string" }
+      }
+    }
+  }
+}

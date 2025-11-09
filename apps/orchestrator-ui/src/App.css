@@ -1,0 +1,197 @@
+.app-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-header__actions button {
+  padding: 8px 16px;
+  border-radius: 24px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-elevated);
+  color: var(--color-foreground);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-header__actions button:hover {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+}
+
+.viewport-stack {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 18px;
+  min-height: 0;
+}
+
+.viewport-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(248, 250, 252, 0.85);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 32px;
+  z-index: 40;
+  box-sizing: border-box;
+  backdrop-filter: blur(6px);
+}
+
+.app-menu-panel {
+  width: min(420px, 100%);
+  background: var(--color-surface-elevated, var(--color-surface));
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.2);
+  padding: 24px;
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.app-menu-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.app-menu-panel__header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.app-menu-close {
+  border: none;
+  background: transparent;
+  color: var(--color-foreground-secondary);
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.app-menu-close:hover {
+  background: rgba(148, 163, 184, 0.15);
+  color: var(--color-foreground);
+}
+
+.generation-controls {
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: rgba(148, 163, 184, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.generation-controls h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-foreground);
+}
+
+.generation-controls__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.generation-controls__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.generation-controls__grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: var(--color-foreground-secondary);
+}
+
+.generation-controls__grid input {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: var(--color-surface);
+  color: var(--color-foreground);
+}
+
+.generation-controls__occupancy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: rgba(148, 163, 184, 0.12);
+  font-size: 0.85rem;
+  color: var(--color-foreground-secondary);
+}
+
+.generation-controls__occupancy.is-error {
+  background: rgba(248, 113, 113, 0.18);
+  color: #fecaca;
+}
+
+.generation-controls__occupancy-remaining {
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+
+.generation-controls__occupancy.is-error .generation-controls__occupancy-remaining {
+  color: #fee2e2;
+}
+
+.generation-controls__mock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--color-foreground-secondary);
+}
+
+.generation-controls__form button {
+  align-self: flex-start;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.generation-controls__form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.generation-controls__status {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-foreground-secondary);
+}
+
+.generation-controls__hint {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--color-foreground-secondary);
+}

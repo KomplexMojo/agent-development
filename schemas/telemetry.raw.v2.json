@@ -1,0 +1,270 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:orchestrator:telemetry:raw:v2",
+  "title": "Optimized Telemetry Document (Raw)",
+  "type": "object",
+  "required": ["version", "surface", "terrain", "actors", "ticks"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "type": "string", "const": "orchestrator.telemetry.v2" },
+    "seed": { "type": "integer" },
+    "summaries": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "guidance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "planId": { "type": "string" },
+        "status": { "type": "string", "enum": ["applied", "failed", "downgraded", "fallback"] },
+        "promptHash": { "type": "string" },
+        "responseHash": { "type": "string" },
+        "model": { "type": "string" },
+        "appliedOptions": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "width": { "type": "integer" },
+            "height": { "type": "integer" },
+            "actorCount": { "type": "integer" },
+            "barrierCount": { "type": "integer" },
+            "ticks": { "type": "integer" }
+          }
+        }
+      }
+    },
+    "surface": {
+      "type": "object",
+      "required": ["width", "height"],
+      "additionalProperties": false,
+      "properties": {
+        "width": { "type": "integer", "minimum": 0 },
+        "height": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "terrain": {
+      "type": "object",
+      "required": ["base", "portals", "stairs", "barriers"],
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "portals": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/portal" }
+        },
+        "stairs": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/stair" }
+        },
+        "barriers": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/barrier" }
+        }
+      }
+    },
+    "actors": {
+      "type": "object",
+      "required": ["meta", "initial"],
+      "additionalProperties": false,
+      "properties": {
+        "meta": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "symbol": { "type": "string" },
+              "role": { "type": "string" },
+              "kind": { "type": "string" },
+              "faction": { "type": "string" },
+              "aius": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["id"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": { "type": "string" },
+                    "tier": { "type": "string" },
+                    "cost": { "type": "number" },
+                    "moduleId": { "type": "number" },
+                    "moduleKind": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "initial": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/actorState" }
+        }
+      }
+    },
+    "ticks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["tick", "actors"],
+        "additionalProperties": false,
+        "properties": {
+          "tick": { "type": "integer", "minimum": 0 },
+          "summary": { "type": "string" },
+          "telemetry": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "directives": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "outcomes": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "solver": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          },
+          "actors": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "x": { "type": "integer" },
+                "y": { "type": "integer" },
+                "stamina": { "type": "number" },
+                "intent": { "type": "string" },
+                "tier": { "type": "string" },
+                "outcome": { "type": "string" },
+                "rejection": { "type": "string" },
+                "role": { "type": "string" },
+                "kind": { "type": "string" },
+                "symbol": { "type": "string" },
+                "despawn": { "type": "boolean" },
+                "solverCode": { "type": "integer" },
+                "solver": {
+                  "type": "object",
+                  "required": ["verdict"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "verdict": { "type": "string" },
+                    "code": { "type": "integer" },
+                    "reason": { "type": "string" }
+                  }
+                },
+                "aiuMode": { "type": "string" },
+                "aiuModeCode": { "type": "integer" },
+                "aiuAux": { "type": "integer" },
+                "aiuApplied": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "aiuDropped": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "cultivation": {
+                  "type": "object",
+                  "required": ["isActive", "ticks"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "isActive": { "type": "boolean" },
+                    "ticks": { "type": "integer", "minimum": 0 }
+                  }
+                },
+                "vulnerability": { "type": "integer" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "total": { "type": "number", "minimum": 0 },
+        "spent": { "type": "number", "minimum": 0 },
+        "remaining": { "type": "number", "minimum": 0 }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "model": { "type": "string" },
+        "promptHash": { "type": "string" },
+        "responseHash": { "type": "string" },
+        "generatedAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "$defs": {
+    "portal": {
+      "type": "object",
+      "required": ["x", "y", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "type": { "type": "string", "enum": ["entrance", "exit"] },
+        "symbol": { "type": "string" }
+      }
+    },
+    "stair": {
+      "type": "object",
+      "required": ["x", "y", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "type": { "type": "string", "enum": ["up", "down"] },
+        "symbol": { "type": "string" }
+      }
+    },
+    "barrier": {
+      "type": "object",
+      "required": ["id", "x", "y"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "symbol": { "type": "string" },
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "stamina": { "type": "number" },
+        "intent": { "type": "string" },
+        "tier": { "type": "string" },
+        "outcome": { "type": "string" },
+        "rejection": { "type": "string" },
+        "role": { "type": "string" },
+        "kind": { "type": "string" }
+      }
+    },
+    "actorState": {
+      "type": "object",
+      "required": ["x", "y", "stamina"],
+      "additionalProperties": false,
+      "properties": {
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "stamina": { "type": "number" },
+        "intent": { "type": "string" },
+        "tier": { "type": "string" },
+        "outcome": { "type": "string" },
+        "rejection": { "type": "string" },
+        "role": { "type": "string" },
+        "kind": { "type": "string" },
+        "symbol": { "type": "string" },
+        "faction": { "type": "string" }
+      }
+    }
+  }
+}

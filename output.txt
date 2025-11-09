@@ -1,0 +1,453 @@
+Seed: 1761406444840
+
+==========
+Tick 0
+.........▶
+....█..γ..
+.......█..
+..........
+.....▲....
+.δ....█...
+.....▼...β
+..........
+....α█..█.
+◀......ε..
+Telemetry:
+  directives: actor-α-1:vec(-1,-1) tier=aiu out=accepted stamina=94 rej=none, actor-β-2:vec(1,-1) tier=aiu out=accepted stamina=94 rej=none, actor-γ-3:vec(0,0) tier=aiu out=accepted stamina=100 rej=none, actor-δ-4:vec(1,1) tier=aiu out=accepted stamina=94 rej=none, actor-ε-5:vec(0,1) tier=aiu out=accepted stamina=96 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(4,8) stamina=94, actor-β-2@(9,6) stamina=94, actor-γ-3@(7,1) stamina=100, actor-δ-4@(1,5) stamina=94, actor-ε-5@(7,9) stamina=96, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 1
+.........▶
+....█...γ.
+.......█..
+..........
+.....▲....
+......█...
+δ....▼...β
+..........
+.....█..█.
+◀..α...ε..
+Telemetry:
+  directives: actor-α-1:vec(-1,1) tier=aiu out=accepted stamina=88 rej=none, actor-β-2:vec(0,0) tier=aiu out=accepted stamina=94 rej=none, actor-γ-3:vec(1,0) tier=aiu out=accepted stamina=96 rej=none, actor-δ-4:vec(-1,1) tier=aiu out=accepted stamina=88 rej=none, actor-ε-5:vec(0,0) tier=aiu out=accepted stamina=96 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(3,9) stamina=88, actor-β-2@(9,6) stamina=94, actor-γ-3@(8,1) stamina=96, actor-δ-4@(0,6) stamina=88, actor-ε-5@(7,9) stamina=96, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 2
+.........▶
+....█..γ..
+.......█..
+..........
+.....▲....
+......█.β.
+.δ...▼....
+..........
+..α..█..█.
+◀.......ε.
+Telemetry:
+  directives: actor-α-1:vec(-1,-1) tier=aiu out=accepted stamina=82 rej=none, actor-β-2:vec(-1,-1) tier=aiu out=accepted stamina=88 rej=none, actor-γ-3:vec(-1,0) tier=aiu out=accepted stamina=92 rej=none, actor-δ-4:vec(1,0) tier=aiu out=accepted stamina=84 rej=none, actor-ε-5:vec(1,0) tier=aiu out=accepted stamina=92 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(2,8) stamina=82, actor-β-2@(8,5) stamina=88, actor-γ-3@(7,1) stamina=92, actor-δ-4@(1,6) stamina=84, actor-ε-5@(8,9) stamina=92, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 3
+.........▶
+....█...γ.
+.......█..
+..........
+.....▲....
+..δ...█β..
+.....▼....
+...α......
+.....█..█.
+◀......ε..
+Telemetry:
+  directives: actor-α-1:vec(1,-1) tier=aiu out=accepted stamina=76 rej=none, actor-β-2:vec(-1,0) tier=aiu out=accepted stamina=84 rej=none, actor-γ-3:vec(1,0) tier=aiu out=accepted stamina=88 rej=none, actor-δ-4:vec(1,-1) tier=aiu out=accepted stamina=78 rej=none, actor-ε-5:vec(-1,0) tier=aiu out=accepted stamina=88 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(3,7) stamina=76, actor-β-2@(7,5) stamina=84, actor-γ-3@(8,1) stamina=88, actor-δ-4@(2,5) stamina=78, actor-ε-5@(7,9) stamina=88, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 4
+........γ▶
+....█.....
+.......█..
+..........
+.....▲....
+..δ...█...
+.....▼.β..
+...α......
+.....█.ε█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(0,0) tier=aiu out=accepted stamina=76 rej=none, actor-β-2:vec(0,1) tier=aiu out=accepted stamina=80 rej=none, actor-γ-3:vec(0,-1) tier=aiu out=accepted stamina=84 rej=none, actor-δ-4:vec(0,0) tier=aiu out=accepted stamina=78 rej=none, actor-ε-5:vec(0,-1) tier=aiu out=accepted stamina=84 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(3,7) stamina=76, actor-β-2@(7,6) stamina=80, actor-γ-3@(8,0) stamina=84, actor-δ-4@(2,5) stamina=78, actor-ε-5@(7,8) stamina=84, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 5
+.........▶
+....█....γ
+.......█..
+..........
+.....▲....
+...δ..█β..
+.....▼....
+....α..ε..
+.....█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(1,0) tier=aiu out=accepted stamina=72 rej=none, actor-β-2:vec(0,-1) tier=aiu out=accepted stamina=76 rej=none, actor-γ-3:vec(1,1) tier=aiu out=accepted stamina=78 rej=none, actor-δ-4:vec(1,0) tier=aiu out=accepted stamina=74 rej=none, actor-ε-5:vec(0,-1) tier=aiu out=accepted stamina=80 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(4,7) stamina=72, actor-β-2@(7,5) stamina=76, actor-γ-3@(9,1) stamina=78, actor-δ-4@(3,5) stamina=74, actor-ε-5@(7,7) stamina=80, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 6
+.........▶
+....█.....
+.......█γ.
+..........
+.....▲....
+..δ...█...
+.....▼..β.
+...α......
+.....█.ε█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(-1,0) tier=aiu out=accepted stamina=68 rej=none, actor-β-2:vec(1,1) tier=aiu out=accepted stamina=70 rej=none, actor-γ-3:vec(-1,1) tier=aiu out=accepted stamina=72 rej=none, actor-δ-4:vec(-1,0) tier=aiu out=accepted stamina=70 rej=none, actor-ε-5:vec(0,1) tier=aiu out=accepted stamina=76 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(3,7) stamina=68, actor-β-2@(8,6) stamina=70, actor-γ-3@(8,2) stamina=72, actor-δ-4@(2,5) stamina=70, actor-ε-5@(7,8) stamina=76, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 7
+.........▶
+....█..γ..
+.......█..
+..........
+.....▲....
+......█...
+..δ..▼....
+.......β..
+...α.█..█.
+◀.....ε...
+Telemetry:
+  directives: actor-α-1:vec(0,1) tier=aiu out=accepted stamina=64 rej=none, actor-β-2:vec(-1,1) tier=aiu out=accepted stamina=64 rej=none, actor-γ-3:vec(-1,-1) tier=aiu out=accepted stamina=66 rej=none, actor-δ-4:vec(0,1) tier=aiu out=accepted stamina=66 rej=none, actor-ε-5:vec(-1,1) tier=aiu out=accepted stamina=70 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(3,8) stamina=64, actor-β-2@(7,7) stamina=64, actor-γ-3@(7,1) stamina=66, actor-δ-4@(2,6) stamina=66, actor-ε-5@(6,9) stamina=70, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 8
+........γ▶
+....█.....
+.......█..
+..........
+.....▲....
+..δ...█...
+.....▼β...
+...α......
+.....█.ε█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(0,-1) tier=aiu out=accepted stamina=60 rej=none, actor-β-2:vec(-1,-1) tier=aiu out=accepted stamina=58 rej=none, actor-γ-3:vec(1,-1) tier=aiu out=accepted stamina=60 rej=none, actor-δ-4:vec(0,-1) tier=aiu out=accepted stamina=62 rej=none, actor-ε-5:vec(1,-1) tier=aiu out=accepted stamina=64 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(3,7) stamina=60, actor-β-2@(6,6) stamina=58, actor-γ-3@(8,0) stamina=60, actor-δ-4@(2,5) stamina=62, actor-ε-5@(7,8) stamina=64, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 9
+........γ▶
+....█.....
+.......█..
+..........
+.....▲....
+......█β..
+...δ.▼....
+........ε.
+....α█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(1,1) tier=aiu out=accepted stamina=54 rej=none, actor-β-2:vec(1,-1) tier=aiu out=accepted stamina=52 rej=none, actor-γ-3:vec(0,0) tier=aiu out=accepted stamina=60 rej=none, actor-δ-4:vec(1,1) tier=aiu out=accepted stamina=56 rej=none, actor-ε-5:vec(1,-1) tier=aiu out=accepted stamina=58 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(4,8) stamina=54, actor-β-2@(7,5) stamina=52, actor-γ-3@(8,0) stamina=60, actor-δ-4@(3,6) stamina=56, actor-ε-5@(8,7) stamina=58, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 10
+.........γ
+....█.....
+.......█..
+..........
+.....▲....
+......█β..
+.....▼....
+..δ.....ε.
+.....█..█.
+◀..α......
+Telemetry:
+  directives: actor-α-1:vec(-1,1) tier=aiu out=accepted stamina=48 rej=none, actor-β-2:vec(0,0) tier=aiu out=accepted stamina=52 rej=none, actor-γ-3:vec(1,0) tier=aiu out=accepted stamina=56 rej=none, actor-δ-4:vec(-1,1) tier=aiu out=accepted stamina=50 rej=none, actor-ε-5:vec(0,0) tier=aiu out=accepted stamina=58 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(3,9) stamina=48, actor-β-2@(7,5) stamina=52, actor-γ-3@(9,0) stamina=56, actor-δ-4@(2,7) stamina=50, actor-ε-5@(8,7) stamina=58, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 11
+........γ▶
+....█.....
+.......█..
+..........
+.....▲....
+......█.β.
+.δ...▼....
+.........ε
+..α..█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(-1,-1) tier=aiu out=accepted stamina=42 rej=none, actor-β-2:vec(1,0) tier=aiu out=accepted stamina=48 rej=none, actor-γ-3:vec(-1,0) tier=aiu out=accepted stamina=52 rej=none, actor-δ-4:vec(-1,-1) tier=aiu out=accepted stamina=44 rej=none, actor-ε-5:vec(1,0) tier=aiu out=accepted stamina=54 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(2,8) stamina=42, actor-β-2@(8,5) stamina=48, actor-γ-3@(8,0) stamina=52, actor-δ-4@(1,6) stamina=44, actor-ε-5@(9,7) stamina=54, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 12
+.........▶
+....█...γ.
+.......█..
+..........
+.....▲....
+..δ...█β..
+.....▼....
+...α....ε.
+.....█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(1,-1) tier=aiu out=accepted stamina=36 rej=none, actor-β-2:vec(-1,0) tier=aiu out=accepted stamina=44 rej=none, actor-γ-3:vec(0,1) tier=aiu out=accepted stamina=48 rej=none, actor-δ-4:vec(1,-1) tier=aiu out=accepted stamina=38 rej=none, actor-ε-5:vec(-1,0) tier=aiu out=accepted stamina=50 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(3,7) stamina=36, actor-β-2@(7,5) stamina=44, actor-γ-3@(8,1) stamina=48, actor-δ-4@(2,5) stamina=38, actor-ε-5@(8,7) stamina=50, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 13
+........γ▶
+....█.....
+.......█..
+..........
+.....▲....
+..δ...█...
+.....▼.β..
+...α.....ε
+.....█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(0,0) tier=aiu out=accepted stamina=36 rej=none, actor-β-2:vec(0,1) tier=aiu out=accepted stamina=40 rej=none, actor-γ-3:vec(0,-1) tier=aiu out=accepted stamina=44 rej=none, actor-δ-4:vec(0,0) tier=aiu out=accepted stamina=38 rej=none, actor-ε-5:vec(1,0) tier=aiu out=accepted stamina=46 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(3,7) stamina=36, actor-β-2@(7,6) stamina=40, actor-γ-3@(8,0) stamina=44, actor-δ-4@(2,5) stamina=38, actor-ε-5@(9,7) stamina=46, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 14
+.........▶
+....█....γ
+.......█..
+..........
+.....▲....
+...δ..█β..
+.....▼...ε
+....α.....
+.....█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(1,0) tier=aiu out=accepted stamina=32 rej=none, actor-β-2:vec(0,-1) tier=aiu out=accepted stamina=36 rej=none, actor-γ-3:vec(1,1) tier=aiu out=accepted stamina=38 rej=none, actor-δ-4:vec(1,0) tier=aiu out=accepted stamina=34 rej=none, actor-ε-5:vec(0,-1) tier=aiu out=accepted stamina=42 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(4,7) stamina=32, actor-β-2@(7,5) stamina=36, actor-γ-3@(9,1) stamina=38, actor-δ-4@(3,5) stamina=34, actor-ε-5@(9,6) stamina=42, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 15
+.........▶
+....█.....
+.......█γ.
+..........
+.....▲....
+..δ...█.ε.
+.....▼..β.
+...α......
+.....█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(-1,0) tier=aiu out=accepted stamina=28 rej=none, actor-β-2:vec(1,1) tier=aiu out=accepted stamina=30 rej=none, actor-γ-3:vec(-1,1) tier=aiu out=accepted stamina=32 rej=none, actor-δ-4:vec(-1,0) tier=aiu out=accepted stamina=30 rej=none, actor-ε-5:vec(-1,-1) tier=aiu out=accepted stamina=36 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(3,7) stamina=28, actor-β-2@(8,6) stamina=30, actor-γ-3@(8,2) stamina=32, actor-δ-4@(2,5) stamina=30, actor-ε-5@(8,5) stamina=36, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 16
+.........▶
+....█..γ..
+.......█..
+..........
+.....▲....
+......█...
+..δ..▼.ε..
+.......β..
+...α.█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(0,1) tier=aiu out=accepted stamina=24 rej=none, actor-β-2:vec(-1,1) tier=aiu out=accepted stamina=24 rej=none, actor-γ-3:vec(-1,-1) tier=aiu out=accepted stamina=26 rej=none, actor-δ-4:vec(0,1) tier=aiu out=accepted stamina=26 rej=none, actor-ε-5:vec(-1,1) tier=aiu out=accepted stamina=30 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(3,8) stamina=24, actor-β-2@(7,7) stamina=24, actor-γ-3@(7,1) stamina=26, actor-δ-4@(2,6) stamina=26, actor-ε-5@(7,6) stamina=30, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 17
+........γ▶
+....█.....
+.......█..
+..........
+.....▲....
+..δ...█...
+.....▼β...
+...α....ε.
+.....█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(0,-1) tier=aiu out=accepted stamina=20 rej=none, actor-β-2:vec(-1,-1) tier=aiu out=accepted stamina=18 rej=none, actor-γ-3:vec(1,-1) tier=aiu out=accepted stamina=20 rej=none, actor-δ-4:vec(0,-1) tier=aiu out=accepted stamina=22 rej=none, actor-ε-5:vec(1,1) tier=aiu out=accepted stamina=24 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(3,7) stamina=20, actor-β-2@(6,6) stamina=18, actor-γ-3@(8,0) stamina=20, actor-δ-4@(2,5) stamina=22, actor-ε-5@(8,7) stamina=24, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 18
+........γ▶
+....█.....
+.......█..
+..........
+.....▲....
+......█β..
+...δ.▼...ε
+..........
+....α█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(1,1) tier=aiu out=accepted stamina=14 rej=none, actor-β-2:vec(1,-1) tier=aiu out=accepted stamina=12 rej=none, actor-γ-3:vec(0,0) tier=aiu out=accepted stamina=20 rej=none, actor-δ-4:vec(1,1) tier=aiu out=accepted stamina=16 rej=none, actor-ε-5:vec(1,-1) tier=aiu out=accepted stamina=18 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(4,8) stamina=14, actor-β-2@(7,5) stamina=12, actor-γ-3@(8,0) stamina=20, actor-δ-4@(3,6) stamina=16, actor-ε-5@(9,6) stamina=18, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 19
+.........γ
+....█.....
+.......█..
+..........
+.....▲....
+......█β..
+.....▼...ε
+..δ.......
+.....█..█.
+◀..α......
+Telemetry:
+  directives: actor-α-1:vec(-1,1) tier=aiu out=accepted stamina=8 rej=none, actor-β-2:vec(0,0) tier=aiu out=accepted stamina=12 rej=none, actor-γ-3:vec(1,0) tier=aiu out=accepted stamina=16 rej=none, actor-δ-4:vec(-1,1) tier=aiu out=accepted stamina=10 rej=none, actor-ε-5:vec(0,0) tier=aiu out=accepted stamina=18 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(3,9) stamina=8, actor-β-2@(7,5) stamina=12, actor-γ-3@(9,0) stamina=16, actor-δ-4@(2,7) stamina=10, actor-ε-5@(9,6) stamina=18, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 20
+........γ▶
+....█.....
+.......█..
+..........
+.....▲....
+......█.βε
+.δ...▼....
+..........
+..α..█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(-1,-1) tier=aiu out=accepted stamina=2 rej=none, actor-β-2:vec(1,0) tier=aiu out=accepted stamina=8 rej=none, actor-γ-3:vec(-1,0) tier=aiu out=accepted stamina=12 rej=none, actor-δ-4:vec(-1,-1) tier=aiu out=accepted stamina=4 rej=none, actor-ε-5:vec(0,-1) tier=aiu out=accepted stamina=14 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(2,8) stamina=2, actor-β-2@(8,5) stamina=8, actor-γ-3@(8,0) stamina=12, actor-δ-4@(1,6) stamina=4, actor-ε-5@(9,5) stamina=14, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 21
+.........▶
+....█...γ.
+.......█..
+..........
+.....▲....
+......█β..
+.δ...▼...ε
+..........
+..α..█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(1,-1) tier=aiu out=rejected stamina=2 rej=stamina, actor-β-2:vec(-1,0) tier=aiu out=accepted stamina=4 rej=none, actor-γ-3:vec(0,1) tier=aiu out=accepted stamina=8 rej=none, actor-δ-4:vec(1,-1) tier=aiu out=rejected stamina=4 rej=stamina, actor-ε-5:vec(0,1) tier=aiu out=accepted stamina=10 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(2,8) stamina=2, actor-β-2@(7,5) stamina=4, actor-γ-3@(8,1) stamina=8, actor-δ-4@(1,6) stamina=4, actor-ε-5@(9,6) stamina=10, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 22
+........γ▶
+....█.....
+.......█..
+..........
+.....▲....
+......█...
+.δ...▼.β..
+.........ε
+..α..█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(0,0) tier=aiu out=accepted stamina=2 rej=none, actor-β-2:vec(0,1) tier=aiu out=accepted stamina=0 rej=none, actor-γ-3:vec(0,-1) tier=aiu out=accepted stamina=4 rej=none, actor-δ-4:vec(0,0) tier=aiu out=accepted stamina=4 rej=none, actor-ε-5:vec(0,1) tier=aiu out=accepted stamina=6 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(2,8) stamina=2, actor-β-2@(7,6) stamina=0, actor-γ-3@(8,0) stamina=4, actor-δ-4@(1,6) stamina=4, actor-ε-5@(9,7) stamina=6, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 23
+........γ▶
+....█.....
+.......█..
+..........
+.....▲....
+......█...
+..δ..▼.β.ε
+..........
+..α..█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(1,0) tier=aiu out=rejected stamina=2 rej=stamina, actor-β-2:vec(0,-1) tier=aiu out=rejected stamina=0 rej=stamina, actor-γ-3:vec(1,1) tier=aiu out=rejected stamina=4 rej=stamina, actor-δ-4:vec(1,0) tier=aiu out=accepted stamina=0 rej=none, actor-ε-5:vec(0,-1) tier=aiu out=accepted stamina=2 rej=none, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(2,8) stamina=2, actor-β-2@(7,6) stamina=0, actor-γ-3@(8,0) stamina=4, actor-δ-4@(2,6) stamina=0, actor-ε-5@(9,6) stamina=2, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+==========
+Tick 24
+........γ▶
+....█.....
+.......█..
+..........
+.....▲....
+......█...
+..δ..▼.β.ε
+..........
+..α..█..█.
+◀.........
+Telemetry:
+  directives: actor-α-1:vec(-1,0) tier=aiu out=rejected stamina=2 rej=stamina, actor-β-2:vec(1,1) tier=aiu out=rejected stamina=0 rej=stamina, actor-γ-3:vec(-1,1) tier=aiu out=rejected stamina=4 rej=stamina, actor-δ-4:vec(-1,0) tier=aiu out=rejected stamina=0 rej=stamina, actor-ε-5:vec(0,1) tier=aiu out=rejected stamina=2 rej=stamina, barrier-1:barrier(stationary) stamina=0, barrier-2:barrier(stationary) stamina=0, barrier-3:barrier(stationary) stamina=0, barrier-4:barrier(stationary) stamina=0, barrier-5:barrier(stationary) stamina=0
+  outcomes:   actor-α-1@(2,8) stamina=2, actor-β-2@(7,6) stamina=0, actor-γ-3@(8,0) stamina=4, actor-δ-4@(2,6) stamina=0, actor-ε-5@(9,6) stamina=2, barrier-1@(4,1) barrier, barrier-2@(5,8) barrier, barrier-3@(6,5) barrier, barrier-4@(7,2) barrier, barrier-5@(8,8) barrier
+==========
+
+Summaries:
+  tick 1: commit results=5 | actor=4 tier=1 dx=1 dy=1 outcome=1 rejection=0 final=(1,5,0) | actor=5 tier=1 dx=0 dy=1 outcome=1 rejection=0 final=(7,9,0) | actor=1 tier=1 dx=-1 dy=-1 outcome=1 rejection=0 final=(4,8,0) | actor=2 tier=1 dx=1 dy=-1 outcome=1 rejection=0 final=(9,6,0) | actor=3 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(7,1,0) | positions: α@(4,8) stamina=94 β@(9,6) stamina=94 γ@(7,1) stamina=100 δ@(1,5) stamina=94 ε@(7,9) stamina=96 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 2: commit results=5 | actor=5 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(7,9,0) | actor=2 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(9,6,0) | actor=3 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(8,1,0) | actor=1 tier=1 dx=-1 dy=1 outcome=1 rejection=0 final=(3,9,0) | actor=4 tier=1 dx=-1 dy=1 outcome=1 rejection=0 final=(0,6,0) | positions: α@(3,9) stamina=88 β@(9,6) stamina=94 γ@(8,1) stamina=96 δ@(0,6) stamina=88 ε@(7,9) stamina=96 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 3: commit results=5 | actor=5 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(8,9,0) | actor=3 tier=1 dx=-1 dy=0 outcome=1 rejection=0 final=(7,1,0) | actor=1 tier=1 dx=-1 dy=-1 outcome=1 rejection=0 final=(2,8,0) | actor=2 tier=1 dx=-1 dy=-1 outcome=1 rejection=0 final=(8,5,0) | actor=4 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(1,6,0) | positions: α@(2,8) stamina=82 β@(8,5) stamina=88 γ@(7,1) stamina=92 δ@(1,6) stamina=84 ε@(8,9) stamina=92 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 4: commit results=5 | actor=1 tier=1 dx=1 dy=-1 outcome=1 rejection=0 final=(3,7,0) | actor=2 tier=1 dx=-1 dy=0 outcome=1 rejection=0 final=(7,5,0) | actor=5 tier=1 dx=-1 dy=0 outcome=1 rejection=0 final=(7,9,0) | actor=4 tier=1 dx=1 dy=-1 outcome=1 rejection=0 final=(2,5,0) | actor=3 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(8,1,0) | positions: α@(3,7) stamina=76 β@(7,5) stamina=84 γ@(8,1) stamina=88 δ@(2,5) stamina=78 ε@(7,9) stamina=88 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 5: commit results=5 | actor=3 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(8,0,0) | actor=2 tier=1 dx=0 dy=1 outcome=1 rejection=0 final=(7,6,0) | actor=5 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(7,8,0) | actor=4 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(2,5,0) | actor=1 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(3,7,0) | positions: α@(3,7) stamina=76 β@(7,6) stamina=80 γ@(8,0) stamina=84 δ@(2,5) stamina=78 ε@(7,8) stamina=84 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 6: commit results=5 | actor=5 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(7,7,0) | actor=1 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(4,7,0) | actor=2 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(7,5,0) | actor=4 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(3,5,0) | actor=3 tier=1 dx=1 dy=1 outcome=1 rejection=0 final=(9,1,0) | positions: α@(4,7) stamina=72 β@(7,5) stamina=76 γ@(9,1) stamina=78 δ@(3,5) stamina=74 ε@(7,7) stamina=80 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 7: commit results=5 | actor=3 tier=1 dx=-1 dy=1 outcome=1 rejection=0 final=(8,2,0) | actor=5 tier=1 dx=0 dy=1 outcome=1 rejection=0 final=(7,8,0) | actor=4 tier=1 dx=-1 dy=0 outcome=1 rejection=0 final=(2,5,0) | actor=2 tier=1 dx=1 dy=1 outcome=1 rejection=0 final=(8,6,0) | actor=1 tier=1 dx=-1 dy=0 outcome=1 rejection=0 final=(3,7,0) | positions: α@(3,7) stamina=68 β@(8,6) stamina=70 γ@(8,2) stamina=72 δ@(2,5) stamina=70 ε@(7,8) stamina=76 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 8: commit results=5 | actor=3 tier=1 dx=-1 dy=-1 outcome=1 rejection=0 final=(7,1,0) | actor=2 tier=1 dx=-1 dy=1 outcome=1 rejection=0 final=(7,7,0) | actor=5 tier=1 dx=-1 dy=1 outcome=1 rejection=0 final=(6,9,0) | actor=1 tier=1 dx=0 dy=1 outcome=1 rejection=0 final=(3,8,0) | actor=4 tier=1 dx=0 dy=1 outcome=1 rejection=0 final=(2,6,0) | positions: α@(3,8) stamina=64 β@(7,7) stamina=64 γ@(7,1) stamina=66 δ@(2,6) stamina=66 ε@(6,9) stamina=70 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 9: commit results=5 | actor=2 tier=1 dx=-1 dy=-1 outcome=1 rejection=0 final=(6,6,0) | actor=4 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(2,5,0) | actor=5 tier=1 dx=1 dy=-1 outcome=1 rejection=0 final=(7,8,0) | actor=3 tier=1 dx=1 dy=-1 outcome=1 rejection=0 final=(8,0,0) | actor=1 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(3,7,0) | positions: α@(3,7) stamina=60 β@(6,6) stamina=58 γ@(8,0) stamina=60 δ@(2,5) stamina=62 ε@(7,8) stamina=64 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 10: commit results=5 | actor=5 tier=1 dx=1 dy=-1 outcome=1 rejection=0 final=(8,7,0) | actor=4 tier=1 dx=1 dy=1 outcome=1 rejection=0 final=(3,6,0) | actor=2 tier=1 dx=1 dy=-1 outcome=1 rejection=0 final=(7,5,0) | actor=3 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(8,0,0) | actor=1 tier=1 dx=1 dy=1 outcome=1 rejection=0 final=(4,8,0) | positions: α@(4,8) stamina=54 β@(7,5) stamina=52 γ@(8,0) stamina=60 δ@(3,6) stamina=56 ε@(8,7) stamina=58 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 11: commit results=5 | actor=2 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(7,5,0) | actor=3 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(9,0,0) | actor=5 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(8,7,0) | actor=1 tier=1 dx=-1 dy=1 outcome=1 rejection=0 final=(3,9,0) | actor=4 tier=1 dx=-1 dy=1 outcome=1 rejection=0 final=(2,7,0) | positions: α@(3,9) stamina=48 β@(7,5) stamina=52 γ@(9,0) stamina=56 δ@(2,7) stamina=50 ε@(8,7) stamina=58 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 12: commit results=5 | actor=4 tier=1 dx=-1 dy=-1 outcome=1 rejection=0 final=(1,6,0) | actor=2 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(8,5,0) | actor=1 tier=1 dx=-1 dy=-1 outcome=1 rejection=0 final=(2,8,0) | actor=5 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(9,7,0) | actor=3 tier=1 dx=-1 dy=0 outcome=1 rejection=0 final=(8,0,0) | positions: α@(2,8) stamina=42 β@(8,5) stamina=48 γ@(8,0) stamina=52 δ@(1,6) stamina=44 ε@(9,7) stamina=54 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 13: commit results=5 | actor=2 tier=1 dx=-1 dy=0 outcome=1 rejection=0 final=(7,5,0) | actor=4 tier=1 dx=1 dy=-1 outcome=1 rejection=0 final=(2,5,0) | actor=5 tier=1 dx=-1 dy=0 outcome=1 rejection=0 final=(8,7,0) | actor=1 tier=1 dx=1 dy=-1 outcome=1 rejection=0 final=(3,7,0) | actor=3 tier=1 dx=0 dy=1 outcome=1 rejection=0 final=(8,1,0) | positions: α@(3,7) stamina=36 β@(7,5) stamina=44 γ@(8,1) stamina=48 δ@(2,5) stamina=38 ε@(8,7) stamina=50 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 14: commit results=5 | actor=1 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(3,7,0) | actor=2 tier=1 dx=0 dy=1 outcome=1 rejection=0 final=(7,6,0) | actor=4 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(2,5,0) | actor=3 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(8,0,0) | actor=5 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(9,7,0) | positions: α@(3,7) stamina=36 β@(7,6) stamina=40 γ@(8,0) stamina=44 δ@(2,5) stamina=38 ε@(9,7) stamina=46 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 15: commit results=5 | actor=1 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(4,7,0) | actor=2 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(7,5,0) | actor=3 tier=1 dx=1 dy=1 outcome=1 rejection=0 final=(9,1,0) | actor=4 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(3,5,0) | actor=5 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(9,6,0) | positions: α@(4,7) stamina=32 β@(7,5) stamina=36 γ@(9,1) stamina=38 δ@(3,5) stamina=34 ε@(9,6) stamina=42 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 16: commit results=5 | actor=1 tier=1 dx=-1 dy=0 outcome=1 rejection=0 final=(3,7,0) | actor=3 tier=1 dx=-1 dy=1 outcome=1 rejection=0 final=(8,2,0) | actor=5 tier=1 dx=-1 dy=-1 outcome=1 rejection=0 final=(8,5,0) | actor=2 tier=1 dx=1 dy=1 outcome=1 rejection=0 final=(8,6,0) | actor=4 tier=1 dx=-1 dy=0 outcome=1 rejection=0 final=(2,5,0) | positions: α@(3,7) stamina=28 β@(8,6) stamina=30 γ@(8,2) stamina=32 δ@(2,5) stamina=30 ε@(8,5) stamina=36 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 17: commit results=5 | actor=2 tier=1 dx=-1 dy=1 outcome=1 rejection=0 final=(7,7,0) | actor=1 tier=1 dx=0 dy=1 outcome=1 rejection=0 final=(3,8,0) | actor=5 tier=1 dx=-1 dy=1 outcome=1 rejection=0 final=(7,6,0) | actor=3 tier=1 dx=-1 dy=-1 outcome=1 rejection=0 final=(7,1,0) | actor=4 tier=1 dx=0 dy=1 outcome=1 rejection=0 final=(2,6,0) | positions: α@(3,8) stamina=24 β@(7,7) stamina=24 γ@(7,1) stamina=26 δ@(2,6) stamina=26 ε@(7,6) stamina=30 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 18: commit results=5 | actor=3 tier=1 dx=1 dy=-1 outcome=1 rejection=0 final=(8,0,0) | actor=1 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(3,7,0) | actor=2 tier=1 dx=-1 dy=-1 outcome=1 rejection=0 final=(6,6,0) | actor=5 tier=1 dx=1 dy=1 outcome=1 rejection=0 final=(8,7,0) | actor=4 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(2,5,0) | positions: α@(3,7) stamina=20 β@(6,6) stamina=18 γ@(8,0) stamina=20 δ@(2,5) stamina=22 ε@(8,7) stamina=24 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 19: commit results=5 | actor=3 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(8,0,0) | actor=5 tier=1 dx=1 dy=-1 outcome=1 rejection=0 final=(9,6,0) | actor=4 tier=1 dx=1 dy=1 outcome=1 rejection=0 final=(3,6,0) | actor=2 tier=1 dx=1 dy=-1 outcome=1 rejection=0 final=(7,5,0) | actor=1 tier=1 dx=1 dy=1 outcome=1 rejection=0 final=(4,8,0) | positions: α@(4,8) stamina=14 β@(7,5) stamina=12 γ@(8,0) stamina=20 δ@(3,6) stamina=16 ε@(9,6) stamina=18 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 20: commit results=5 | actor=4 tier=1 dx=-1 dy=1 outcome=1 rejection=0 final=(2,7,0) | actor=5 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(9,6,0) | actor=3 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(9,0,0) | actor=1 tier=1 dx=-1 dy=1 outcome=1 rejection=0 final=(3,9,0) | actor=2 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(7,5,0) | positions: α@(3,9) stamina=8 β@(7,5) stamina=12 γ@(9,0) stamina=16 δ@(2,7) stamina=10 ε@(9,6) stamina=18 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 21: commit results=5 | actor=4 tier=1 dx=-1 dy=-1 outcome=1 rejection=0 final=(1,6,0) | actor=5 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(9,5,0) | actor=2 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(8,5,0) | actor=3 tier=1 dx=-1 dy=0 outcome=1 rejection=0 final=(8,0,0) | actor=1 tier=1 dx=-1 dy=-1 outcome=1 rejection=0 final=(2,8,0) | positions: α@(2,8) stamina=2 β@(8,5) stamina=8 γ@(8,0) stamina=12 δ@(1,6) stamina=4 ε@(9,5) stamina=14 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 22: commit results=5 | actor=1 tier=1 dx=1 dy=-1 outcome=2 rejection=1 final=(2,8,0) | actor=3 tier=1 dx=0 dy=1 outcome=1 rejection=0 final=(8,1,0) | actor=4 tier=1 dx=1 dy=-1 outcome=2 rejection=1 final=(1,6,0) | actor=2 tier=1 dx=-1 dy=0 outcome=1 rejection=0 final=(7,5,0) | actor=5 tier=1 dx=0 dy=1 outcome=1 rejection=0 final=(9,6,0) | positions: α@(2,8) stamina=2 β@(7,5) stamina=4 γ@(8,1) stamina=8 δ@(1,6) stamina=4 ε@(9,6) stamina=10 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 23: commit results=5 | actor=1 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(2,8,0) | actor=2 tier=1 dx=0 dy=1 outcome=1 rejection=0 final=(7,6,0) | actor=3 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(8,0,0) | actor=4 tier=1 dx=0 dy=0 outcome=1 rejection=0 final=(1,6,0) | actor=5 tier=1 dx=0 dy=1 outcome=1 rejection=0 final=(9,7,0) | positions: α@(2,8) stamina=2 β@(7,6) stamina=0 γ@(8,0) stamina=4 δ@(1,6) stamina=4 ε@(9,7) stamina=6 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 24: commit results=5 | actor=1 tier=1 dx=1 dy=0 outcome=2 rejection=1 final=(2,8,0) | actor=2 tier=1 dx=0 dy=-1 outcome=2 rejection=1 final=(7,6,0) | actor=5 tier=1 dx=0 dy=-1 outcome=1 rejection=0 final=(9,6,0) | actor=4 tier=1 dx=1 dy=0 outcome=1 rejection=0 final=(2,6,0) | actor=3 tier=1 dx=1 dy=1 outcome=2 rejection=1 final=(8,0,0) | positions: α@(2,8) stamina=2 β@(7,6) stamina=0 γ@(8,0) stamina=4 δ@(2,6) stamina=0 ε@(9,6) stamina=2 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)
+  tick 25: commit results=5 | actor=3 tier=1 dx=-1 dy=1 outcome=2 rejection=1 final=(8,0,0) | actor=5 tier=1 dx=0 dy=1 outcome=2 rejection=1 final=(9,6,0) | actor=4 tier=1 dx=-1 dy=0 outcome=2 rejection=1 final=(2,6,0) | actor=2 tier=1 dx=1 dy=1 outcome=2 rejection=1 final=(7,6,0) | actor=1 tier=1 dx=-1 dy=0 outcome=2 rejection=1 final=(2,8,0) | positions: α@(2,8) stamina=2 β@(7,6) stamina=0 γ@(8,0) stamina=4 δ@(2,6) stamina=0 ε@(9,6) stamina=2 | barriers: barrier-1@(4,1) barrier barrier-2@(5,8) barrier barrier-3@(6,5) barrier barrier-4@(7,2) barrier barrier-5@(8,8) barrier | portals: entrance@(0,9) exit@(9,0) | stairs: up@(5,4) down@(5,6)

@@ -1,4 +1,4 @@
-// Dedicated worker: owns exactly one agent context.
+// Dedicated worker: owns exactly one actor context.
 // Loads the AssemblyScript build and responds to init/tick/destroy.
 
 let mod;
@@ -7,9 +7,9 @@ let ready = false;
 async function load() {
   if (ready) return;
   try {
-    mod = await import("../../build/release.js");
+    mod = await import("../../apps/simulation/build/release.js");
   } catch {
-    mod = await import("../../build/debug.js");
+    mod = await import("../../apps/simulation/build/debug.js");
   }
   ready = true;
 }
@@ -20,13 +20,13 @@ self.onmessage = async (e) => {
 
   switch (m.type) {
     case "init": {
-      mod.agent_init();
+      mod.actor_init();
       postMessage({ type: "inited", id: m.id });
       break;
     }
     case "tick": {
       // (optional) apply observation frame here later
-      mod.agent_step();
+      mod.actor_step();
       postMessage({
         type: "snapshot",
         id: m.id,

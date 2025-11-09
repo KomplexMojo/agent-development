@@ -1,9 +1,9 @@
 
 
 // web/app.js
-// Purpose: Browser-side scaffold to visualize the agent.
-// - Default: run agent directly in main thread (imports build/*).
-// - Optional: `?mode=worker` uses a dedicated Web Worker per agent via workerWrappers.
+// Purpose: Browser-side scaffold to visualize the actor.
+// - Default: run actor directly in main thread (imports apps/simulation/build/*).
+// - Optional: `?mode=worker` uses a dedicated Web Worker per actor via workerWrappers.
 // The UI elements are provided by index.html (pure display). This file wires behavior.
 
 const params = new URLSearchParams(location.search);
@@ -29,7 +29,7 @@ function drawGrid() {
   ctx2d.globalAlpha = 1;
 }
 
-function drawAgent(x, y) {
+function drawActor(x, y) {
   const ax = x * 10 + 100;
   const ay = 100 - y * 10;
   ctx2d.beginPath(); ctx2d.arc(ax, ay, 5, 0, Math.PI * 2); ctx2d.fill();
@@ -43,13 +43,13 @@ function updateHUD(state) {
   el.cd.textContent = String(state.cd);
   el.eff.textContent = String(state.eff);
   drawGrid();
-  drawAgent(state.x, state.y);
+  drawActor(state.x, state.y);
 }
 
 // --- LOCAL MODE (no workers) ---
 async function startLocal() {
   let mod;
-  try { mod = await import("../build/release.js"); } catch { mod = await import("../build/debug.js"); }
+  try { mod = await import("../apps/simulation/build/release.js"); } catch { mod = await import("../apps/simulation/build/debug.js"); }
 
   function snapshot() {
     return {
@@ -59,8 +59,8 @@ async function startLocal() {
   }
 
   // Wire controls
-  el.btnInit.onclick = () => { mod.agent_init(); updateHUD(snapshot()); };
-  el.btnStep.onclick = () => { mod.agent_step(); updateHUD(snapshot()); };
+  el.btnInit.onclick = () => { mod.actor_init(); updateHUD(snapshot()); };
+  el.btnStep.onclick = () => { mod.actor_step(); updateHUD(snapshot()); };
   el.btnHeal.onclick = () => { mod.heal(5); updateHUD(snapshot()); };
   el.btnSpend.onclick = () => { mod.spend(5); updateHUD(snapshot()); };
   el.btnL.onclick = () => { mod.nudge(-1, 0); updateHUD(snapshot()); };
@@ -69,15 +69,15 @@ async function startLocal() {
   el.btnD.onclick = () => { mod.nudge(0, -1); updateHUD(snapshot()); };
 
   // Boot
-  if (typeof mod.agent_init === "function") mod.agent_init();
+  if (typeof mod.actor_init === "function") mod.actor_init();
   updateHUD(snapshot());
 }
 
-// --- WORKER MODE (dedicated agent thread) ---
+// --- WORKER MODE (dedicated actor thread) ---
 async function startWorker() {
-  const { DedicatedAgentThread } = await import("./workerWrappers.js");
-  const thread = new DedicatedAgentThread();
-  await thread.init("agent-1");
+  const { DedicatedActorThread } = await import("./workerWrappers.js");
+  const thread = new DedicatedActorThread();
+  await thread.init("actor-1");
 
   thread.onMessage((e) => {
     const m = e.data;

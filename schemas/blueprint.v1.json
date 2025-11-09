@@ -1,0 +1,301 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:orchestrator:blueprint:v1",
+  "title": "Orchestrator Layout & Actor Blueprint",
+  "type": "object",
+  "required": [
+    "version",
+    "request",
+    "rooms",
+    "connectors",
+    "anchors",
+    "flow",
+    "actors",
+    "budget"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "orchestrator.blueprint.v1"
+    },
+    "request": {
+      "type": "object",
+      "required": ["width", "height"],
+      "additionalProperties": false,
+      "properties": {
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "actors": { "type": "integer", "minimum": 0 },
+        "barriers": { "type": "integer", "minimum": 0 },
+        "difficulty": { "type": "string" },
+        "seed": { "type": "integer" },
+        "notes": { "type": "string" }
+      }
+    },
+    "rooms": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "bounds"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "name": { "type": "string" },
+          "bounds": {
+            "type": "object",
+            "required": ["x", "y", "width", "height"],
+            "additionalProperties": false,
+            "properties": {
+              "x": { "type": "integer" },
+              "y": { "type": "integer" },
+              "width": { "type": "integer", "minimum": 1 },
+              "height": { "type": "integer", "minimum": 1 }
+            }
+          },
+          "walkable": { "type": "boolean", "default": true },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "uniqueItems": true
+          },
+          "metadata": { "type": "object" }
+        }
+      }
+    },
+    "connectors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "from", "to"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "from": { "type": "string", "minLength": 1 },
+          "to": { "type": "string", "minLength": 1 },
+          "kind": {
+            "type": "string",
+            "enum": ["hallway", "ladder", "elevator", "portal", "tunnel"],
+            "default": "hallway"
+          },
+          "waypoints": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["x", "y"],
+              "additionalProperties": false,
+              "properties": {
+                "x": { "type": "integer" },
+                "y": { "type": "integer" }
+              }
+            }
+          },
+          "width": { "type": "integer", "minimum": 1 },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "uniqueItems": true
+          }
+        }
+      },
+      "default": []
+    },
+    "anchors": {
+      "type": "object",
+      "required": ["start", "exit"],
+      "additionalProperties": false,
+      "properties": {
+        "start": { "$ref": "#/$defs/anchorRef" },
+        "exit": { "$ref": "#/$defs/anchorRef" },
+        "checkpoints": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/anchorRef" }
+        }
+      }
+    },
+    "flow": {
+      "type": "object",
+      "required": ["sequence"],
+      "additionalProperties": false,
+      "properties": {
+        "sequence": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "branches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["entry", "sequence"],
+            "additionalProperties": false,
+            "properties": {
+              "entry": { "type": "string", "minLength": 1 },
+              "sequence": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "requiredPaths": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["from", "to"],
+            "additionalProperties": false,
+            "properties": {
+              "from": { "type": "string", "minLength": 1 },
+              "to": { "type": "string", "minLength": 1 },
+              "maxSteps": { "type": "integer", "minimum": 1 }
+            }
+          }
+        },
+        "forbiddenZones": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/rect" }
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "actors": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/actorGroup" }
+    },
+    "budget": {
+      "type": "object",
+      "required": ["total", "spent", "remaining"],
+      "additionalProperties": false,
+      "properties": {
+        "total": { "type": "number", "minimum": 0 },
+        "spent": { "type": "number", "minimum": 0 },
+        "remaining": { "type": "number", "minimum": 0 },
+        "currency": { "type": "string", "default": "points" },
+        "notes": { "type": "string" }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "explanation": { "type": "string" }
+      }
+    },
+    "provenance": { "$ref": "#/$defs/provenance" }
+  },
+  "$defs": {
+    "rect": {
+      "type": "object",
+      "required": ["x", "y", "width", "height"],
+      "additionalProperties": false,
+      "properties": {
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "anchorRef": {
+      "type": "object",
+      "required": ["roomId"],
+      "additionalProperties": false,
+      "properties": {
+        "roomId": { "type": "string", "minLength": 1 },
+        "position": {
+          "type": "object",
+          "required": ["x", "y"],
+          "additionalProperties": false,
+          "properties": {
+            "x": { "type": "integer" },
+            "y": { "type": "integer" }
+          }
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "spawnIntent": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["room", "near", "coordinate", "path"]
+        },
+        "roomId": { "type": "string" },
+        "target": {
+          "type": "string",
+          "enum": ["start", "exit", "checkpoint", "portal"]
+        },
+        "radius": { "type": "integer", "minimum": 0 },
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["x", "y"],
+            "properties": {
+              "x": { "type": "integer" },
+              "y": { "type": "integer" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "aiuTemplateRef": {
+      "type": "object",
+      "required": ["id"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "tier": { "type": "string" },
+        "cost": { "type": "number", "minimum": 0 },
+        "weight": { "type": "number", "minimum": 0 },
+        "notes": { "type": "string" }
+      }
+    },
+    "actorGroup": {
+      "type": "object",
+      "required": ["label", "count", "faction", "spawn", "aius", "budget"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "description": { "type": "string" },
+        "count": { "type": "integer", "minimum": 0 },
+        "faction": {
+          "type": "string",
+          "enum": ["player", "opposition", "support", "neutral"]
+        },
+        "spawn": { "$ref": "#/$defs/spawnIntent" },
+        "aius": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/aiuTemplateRef" }
+        },
+        "budget": { "type": "number", "minimum": 0 },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "metadata": { "type": "object" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "model": { "type": "string" },
+        "promptHash": { "type": "string" },
+        "responseHash": { "type": "string" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "seed": { "type": "integer" }
+      }
+    }
+  }
+}

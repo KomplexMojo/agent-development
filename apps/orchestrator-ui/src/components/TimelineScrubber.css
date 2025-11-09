@@ -1,0 +1,15 @@
+.timeline-scrubber {
+  margin: 16px 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.timeline-scrubber input[type="range"] {
+  flex: 1;
+}
+
+.timeline-scrubber__label {
+  font-size: 0.9rem;
+  color: var(--color-foreground-secondary);
+}

@@ -1,129 +1,100 @@
-=== 1. Current directory & Git root ===
-PWD: /Users/darren/Documents/GitHub/agent-development
-Git root: /Users/darren/Documents/GitHub/agent-development
-
-=== 2. List files here ===
-total 88
-drwxr-xr-x@ 20 darren  staff   640 Oct  4 09:56 .
-drwxr-xr-x@ 10 darren  staff   320 Oct  4 09:51 ..
--rw-r--r--@  1 darren  staff  6148 Oct  4 09:46 .DS_Store
-drwxr-xr-x  13 darren  staff   416 Oct  4 09:56 .git
--rw-r--r--   1 darren  staff   139 Oct  4 09:20 .gitignore
-drwxr-xr-x   4 darren  staff   128 Oct  4 09:28 .vscode
--rw-r--r--   1 darren  staff   430 Sep 27 10:12 asconfig.json
-drwxr-xr-x   5 darren  staff   160 Sep 27 10:22 assembly
-drwxr-xr-x  18 darren  staff   576 Sep 28 12:10 build
--rwxr-xr-x   1 darren  staff  1408 Oct  4 09:55 check_git_sync.sh
--rw-r--r--   1 darren  staff    84 Oct  4 09:28 codex.config.json
-drwxr-xr-x   3 darren  staff    96 Oct  4 09:27 docs
--rw-r--r--@  1 darren  staff  4348 Sep 27 11:02 index.html
-drwxr-xr-x   7 darren  staff   224 Sep 27 10:12 node_modules
--rw-r--r--   1 darren  staff   181 Oct  4 09:56 out.txt
--rw-r--r--   1 darren  staff  2007 Sep 27 10:12 package-lock.json
--rw-r--r--   1 darren  staff   637 Sep 27 14:27 package.json
-drwxr-xr-x   4 darren  staff   128 Oct  4 09:27 scripts
-drwxr-xr-x  24 darren  staff   768 Oct  4 08:49 tests
-drwxr-xr-x   4 darren  staff   128 Sep 27 10:58 web
-
-=== 3. Git status ===
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	check_git_sync.sh
-	out.txt
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-=== 4. Check for ignored files (sample) ===
-Ignored: .DS_Store  →  .gitignore:7:.DS_Store	/Users/darren/Documents/GitHub/agent-development/.DS_Store
-
-=== 5. Compare actual files vs git tree entries ===
-Filesystem (non-hidden) in current dir:
-asconfig.json
-assembly
-build
-check_git_sync.sh
-codex.config.json
-docs
-index.html
-node_modules
-out.txt
-package-lock.json
-package.json
-scripts
-tests
-web
-
-Git tracked files:
-.gitignore
-asconfig.json
-assembly/agent/agent.ts
-assembly/agent/contracts.ts
-assembly/agent/emission.ts
-assembly/agent/evaluation.ts
-assembly/agent/introspection.ts
-assembly/agent/observation.ts
-assembly/agent/transition.ts
-assembly/agent/vitals.ts
-assembly/index.ts
-assembly/tsconfig.json
-codex.config.json
-docs/p4.AGENT.reqs.md
-index.html
-package-lock.json
-package.json
-scripts/invokeCodex.sh
-scripts/scaffold-agent.cjs
-tests/P4-F03_1.test.js
-tests/P4-N07_1.test.js
-tests/P4_F01_1.test.js
-tests/P4_F01_2.test.js
-tests/P4_F01_5.test.js
-tests/P4_F01_6.test.js
-tests/P4_F01_7.test.js
-tests/P4_F02_1.test.js
-tests/P4_F02_2.test.js
-tests/P4_F02_3.test.js
-tests/P4_F04_1.test.js
-tests/P4_F04_2.test.js
-tests/P4_F04_3.test.js
-tests/P4_F05_1.test.js
-tests/P4_F05_2.test.js
-tests/P4_F<X>_<Y>.txt
-tests/P4_FX.test.js
-tests/P4_N07_2.test.js
-tests/P4_N09.test.js
-tests/P4_orchestration.test.js
-tests/index.js
-web/app.js
-web/workers/agentWorker.js
-web/workers/poolWorker.js
-web/workers/workerWrapper.js
-
-=== 6. Show .gitignore content (if exists) ===
-Contents of .gitignore:
-# Node / JS
-node_modules/
-dist/
-build/
-*.log
-.env
-.DS_Store
-
-# VS Code
-.vscode/
-
-# Local CLI / Codex artifacts
-codex.log
-.codex/
-.env.local
-=== 7. Show nested .git dirs (if any) ===
-./.git
-
-=== 8. Show remote origin URL (if repo) ===
-origin	https://github.com/KomplexMojo/agent-development.git (fetch)
-origin	https://github.com/KomplexMojo/agent-development.git (push)
-
-=== DONE ===
+        },
+        "actor-U2-182": {
+          "intent": "(0,0)",
+          "outcome": "accepted",
+          "rejection": "none"
+        },
+        "actor-V2-183": {
+          "intent": "(0,0)",
+          "outcome": "accepted",
+          "rejection": "none"
+        },
+        "actor-X2-185": {
+          "intent": "(0,0)",
+          "outcome": "accepted",
+          "rejection": "none"
+        },
+        "actor-A3-188": {
+          "intent": "(0,0)",
+          "outcome": "accepted",
+          "rejection": "none"
+        },
+        "actor-B3-189": {
+          "intent": "(0,1)"
+        },
+        "actor-C3-190": {
+          "intent": "(1,-1)"
+        },
+        "actor-D3-191": {
+          "intent": "(1,-1)"
+        },
+        "actor-E3-192": {
+          "intent": "(0,-1)"
+        },
+        "actor-F3-193": {
+          "intent": "(0,-1)"
+        },
+        "actor-G3-194": {
+          "intent": "(0,0)",
+          "outcome": "accepted",
+          "rejection": "none"
+        },
+        "actor-H3-195": {
+          "intent": "(1,0)",
+          "outcome": "rejected",
+          "rejection": "stamina"
+        },
+        "actor-K3-198": {
+          "intent": "(1,1)"
+        },
+        "actor-M3-200": {
+          "intent": "(-1,-1)"
+        },
+        "actor-N3-201": {
+          "intent": "(1,0)",
+          "outcome": "rejected",
+          "rejection": "stamina"
+        },
+        "actor-O3-202": {
+          "intent": "(0,1)"
+        },
+        "actor-Q3-204": {
+          "intent": "(-1,-1)"
+        },
+        "actor-R3-205": {
+          "intent": "(1,0)",
+          "outcome": "rejected",
+          "rejection": "stamina"
+        },
+        "actor-S3-206": {
+          "intent": "(0,1)"
+        },
+        "actor-T3-207": {
+          "intent": "(1,-1)"
+        },
+        "actor-U3-208": {
+          "intent": "(1,1)"
+        },
+        "actor-V3-209": {
+          "intent": "(-1,-1)"
+        },
+        "actor-W3-210": {
+          "intent": "(0,0)",
+          "outcome": "accepted",
+          "rejection": "none"
+        },
+        "actor-X3-211": {
+          "intent": "(0,0)",
+          "outcome": "accepted",
+          "rejection": "none"
+        },
+        "actor-Y3-212": {
+          "intent": "(-1,1)"
+        },
+        "actor-Z3-213": {
+          "intent": "(-1,0)"
+        }
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 <!doctype html>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Agent Visualizer</title>
+<title>Actor Visualizer</title>
 <style>
   :root {
     --bg: #0b0c0e;
@@ -43,7 +43,7 @@
 </style>
 
 <header>
-  <h1>Agent Visualizer</h1>
+  <h1>Actor Visualizer</h1>
   <div class="mode" aria-live="polite">
     <span class="badge" id="mode-badge">mode: local</span>
     <span class="badge" id="fps-badge">fps: –</span>
@@ -54,7 +54,7 @@
 
 <main>
   <aside>
-    <h2>Agent HUD</h2>
+    <h2>Actor HUD</h2>
     <div class="hud" role="list">
       <div>X:</div><code id="x">-</code>
       <div>Y:</div><code id="y">-</code>
@@ -80,7 +80,7 @@
       <!-- Dedicated workers will be listed here by web/app.js -->
     </div>
 
-    <h2 style="margin-top:14px">Pooled Agents</h2>
+    <h2 style="margin-top:14px">Pooled Actors</h2>
     <div class="workers" id="pool-list" aria-live="polite">
       <!-- Pooled agents will be listed here by web/app.js -->
     </div>
